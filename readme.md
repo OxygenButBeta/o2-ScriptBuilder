@@ -1,6 +1,6 @@
 # o2 Script Builder
 
-`o2ScriptBuilder` is a C# utility designed to help you dynamically generate C# script files. It allows you to easily create classes with customizable features such as namespaces, access modifiers, base classes, interfaces, methods, fields, and attributes. This tool is ideal for scenarios like code generation or scaffolding.
+`o2 Script Builder` is a C# utility designed to help you dynamically generate C# script files. It allows you to easily create classes with customizable features such as namespaces, access modifiers, base classes, interfaces, methods, fields, and attributes. This tool is ideal for scenarios like code generation or scaffolding.
 
 ## Features
 
