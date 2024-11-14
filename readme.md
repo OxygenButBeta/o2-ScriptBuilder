@@ -20,14 +20,30 @@ To use `o2ScriptBuilder`, simply add the class to your project. There are no ext
 ## Usage Example
 
 ```csharp
-using o2.Runtime.ScriptGeneration;
+    var methodBuilder = new MethodBuilder()
+        {
+            AccessModifier = AccessModifier._public,
+            Name = "MyMethod",
+            ReturnType = typeof(int),
+            Body = "Console.WriteLine(\"Hello World\");",
+            ExpressionBody = false,
+            MethodType = MethodType._instance
+        };
 
-var scriptBuilder = new ScriptBuilder("MyGeneratedClass")
-    .SetBaseClass<BaseClass>()
-    .AddInterface<IMyInterface>()
-    .AddUsing("System")
-    .AddField(new FieldBuilder("myField", "int"))
-    .AddMethod(new MethodBuilder("MyMethod", "void", "Console.WriteLine(\"Hello World\");"))
-    .Build();
+        methodBuilder.AddAttribute("__DynamicallyInvokable", "")
+            .AddParameter("int", "myParam")
+            .AddParameter("string", "myStringParam")
+            .AddOptionalParameter("int", "myOptionalParam", "-1");
 
-Console.WriteLine(scriptBuilder);
+
+        var scriptBuilder = new ScriptBuilder("MyGeneratedClass")
+            .SetBaseClass<MonoBehaviour>()
+            .AddInterface<IBuildable>()
+            .AddUsing("System")
+            .AddUsing("UnityEngine")
+            .AddField(new FieldBuilder("myField", "int"))
+            .AddMethod(methodBuilder)
+            .Build();
+
+        // Save the script to a file or something..
+
