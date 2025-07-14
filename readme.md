@@ -1,6 +1,6 @@
-# 🛠️ o2 Script Builder
+# 🛠️ O2 Script Builder
 
-`o2 Script Builder` is a **C# utility** designed to help you **dynamically generate C# script files** with ease. Whether you're scaffolding code or automating script creation, this tool simplifies the process of creating classes with customizable namespaces, access modifiers, base classes, interfaces, methods, fields, attributes, and more.
+`O2 Script Builder` is a **C# utility** designed to help you **dynamically generate C# script files** with ease. Whether you're scaffolding code or automating script creation, this tool simplifies the process of creating classes with customizable namespaces, access modifiers, base classes, interfaces, methods, fields, attributes, and more.
 
 ---
 
@@ -19,7 +19,7 @@
 
 ## ⚙️ Installation
 
-Simply add the `o2 Script Builder` class files directly into your project — no external dependencies required!  
+Simply add the `O2 Script Builder` class files directly into your project — no external dependencies required!  
 
 ---
 
